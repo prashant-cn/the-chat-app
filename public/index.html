@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <title>Chat App</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h2>Join Chat</h2>
+            <form name="login">
+                <input type="email" name="email" placeholder="user@email.com" required>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="*****" required>
+                <button>Join</button>
+            </form>
+            <p>Not a user? <a href="./register.html">Register</a></p>
+
+        </div>
+    </div>
+
+    <script src="./js/requests.js"></script>
+    <script>
+        const loginForm = document.querySelector('form[name="login"]')
+        loginForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const data = {
+            email: userEmail.value,
+            password: password.value
+        }
+
+        loginUser(data)
+        })
+    </script>
+</body>
+</html>

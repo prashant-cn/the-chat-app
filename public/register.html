@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+    <title>Chat App</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h2>Register</h2>
+            <form name="register">
+                <label>Name</label>
+                <input type="text" name="username" placeholder="Jhon Doe" required>
+                <label>E-Mail</label>
+                <input type="email" name="email" placeholder="user@email.com" required>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="*****" required>
+                <button>Join</button>
+            </form>
+            <p>Already a user? <a href="./index.html">Login</a></p>
+
+        </div>
+    </div>
+    <script src="./js/requests.js"></script>
+    <script>
+        const registerForm = document.querySelector('form[name="register"]')
+        registerForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const data = {
+            name: userName.value,
+            email: userEmail.value,
+            password: password.value
+        }
+
+        registerUser(data)
+        })
+    </script>
+</body>
+</html>
